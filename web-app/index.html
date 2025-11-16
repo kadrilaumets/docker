@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Labor</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+        h1 {
+            color: #333;
+            border-bottom: 3px solid #ff9a9e;
+            padding-bottom: 10px;
+        }
+        .info {
+            background: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+	.new-box {
+	    backround: #ffe4e6;
+	    padding: 20px;
+	    border-radius: 10px;
+	    margin-top: 20px;
+	    border-left: 5px solid #ff4d6d;
+	}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Docker Labor Rakendus - uuendatud</h1>
+        <div class="info">
+            <p><strong>Tudeng:</strong> Kadri Laumets</p>
+            <p><strong>Kuupäev:</strong> <span id="date"></span></p>
+            <p><strong>Container Hostname:</strong> <span id="hostname"></span></p>
+        </div>
+        <p>See lehekülg töötab Docker container'is, demonstreerides containeriseeritud veebirakenduste deployment'i.</p>
+	<div class="new-box">
+	    <p><strong>Uus muudatus:</strong> See lõik on lisatud uude versiooni! </p>
+	</div>
+    </div>
+    <script>
+        document.getElementById('date').innerText = new Date().toLocaleString('et-EE');
+        document.getElementById('hostname').innerText = window.location.hostname;
+    </script>
+</body>
+</html>
